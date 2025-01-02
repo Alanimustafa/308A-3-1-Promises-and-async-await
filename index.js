@@ -7,7 +7,14 @@ function getUserData(id) {
     db2: db2,
     db3: db3
   };
-  console.log(db1);
 }
 
-getUserData();
+
+// Part 1: The Scenario
+console.log(central(8)) ;
+
+const returnedValue = await db1(1);
+console.log(returnedValue);
+
+const returnedVaultValue = await vault(1);
+console.log(returnedVaultValue);
