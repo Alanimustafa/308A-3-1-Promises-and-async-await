@@ -18,3 +18,16 @@ console.log(returnedValue);
 
 const returnedVaultValue = await vault(1);
 console.log(returnedVaultValue);
+
+
+//Part 2: The Implementation 
+
+function promiseReturn (id) {
+  console.log(returnedValue);
+  console.log(returnedVaultValue);
+
+}
+
+setTimeout( (id) => {
+  console.log(returnedValue);
+  console.log(returnedVaultValue)}, 2000); 
