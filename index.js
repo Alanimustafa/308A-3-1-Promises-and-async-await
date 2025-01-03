@@ -15,10 +15,10 @@ function getUserData(id) {
         resolve(db1(id))
       } else if (id >5 && id < 7) {
         databaseNumber = 2
-        resolve (`Success! The ID# ${id} is in the DataBase# ${databaseNumber}`) ;
+        resolve (db2(id)) ;
       } else if (id >=7 && id <= 10) {
         databaseNumber = 3
-        resolve (`Success! The ID# ${id} is in the DataBase# ${databaseNumber}`) ;
+        resolve (db3(id));
       } else {
         reject("Rejected.. Please try again with different ID number.");
       }
@@ -32,3 +32,5 @@ function getUserData(id) {
   }
 
   getUserData(2);
+  getUserData(6);
+  getUserData(9);
