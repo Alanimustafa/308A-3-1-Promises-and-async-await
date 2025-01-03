@@ -12,7 +12,7 @@ function getUserData(id) {
     let databaseNumber ;
       if (id >=1 && id <= 5) {
         databaseNumber = 1
-        resolve (`Success! The ID# ${id} is in the DataBase# ${databaseNumber}`) ;
+        resolve(db1(id))
       } else if (id >5 && id < 7) {
         databaseNumber = 2
         resolve (`Success! The ID# ${id} is in the DataBase# ${databaseNumber}`) ;
@@ -31,4 +31,4 @@ function getUserData(id) {
     })
   }
 
-  getUserData(18);
+  getUserData(2);
