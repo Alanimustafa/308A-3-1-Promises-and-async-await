@@ -7,27 +7,28 @@ function getUserData(id) {
     db2: db2,
     db3: db3
   };
-}
 
+  const thePromise = new Promise ((resolve, reject) => {
+    let databaseNumber ;
+      if (id >=1 && id <= 5) {
+        databaseNumber = 1
+        resolve (`Success! The ID# ${id} is in the DataBase# ${databaseNumber}`) ;
+      } else if (id >5 && id < 7) {
+        databaseNumber = 2
+        resolve (`Success! The ID# ${id} is in the DataBase# ${databaseNumber}`) ;
+      } else if (id >=7 && id <= 10) {
+        databaseNumber = 3
+        resolve (`Success! The ID# ${id} is in the DataBase# ${databaseNumber}`) ;
+      } else {
+        reject("Rejected.. Please try again with different ID number.");
+      }
+    })
 
-// Part 1: The Scenario
-console.log(central(8)) ;
+    thePromise.then((message) => {
+      console.log(message);
+    }).catch ((error) => {
+      console.error(`ID# ${id} is OUT OF RANGE `, error);
+    })
+  }
 
-const returnedValue = await db1(1);
-console.log(returnedValue);
-
-const returnedVaultValue = await vault(1);
-console.log(returnedVaultValue);
-
-
-//Part 2: The Implementation 
-
-function promiseReturn (id) {
-  console.log(returnedValue);
-  console.log(returnedVaultValue);
-
-}
-
-setTimeout( (id) => {
-  console.log(returnedValue);
-  console.log(returnedVaultValue)}, 2000); 
+  getUserData(18);
