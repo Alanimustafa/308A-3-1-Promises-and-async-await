@@ -12,7 +12,7 @@ function getUserData(id) {
     let databaseNumber ;
       if (id >=1 && id <= 5) {
         databaseNumber = 1
-        resolve(db1(id))
+        resolve(db1(id));
       } else if (id >5 && id < 7) {
         databaseNumber = 2
         resolve (db2(id)) ;
@@ -29,8 +29,10 @@ function getUserData(id) {
     }).catch ((error) => {
       console.error(`ID# ${id} is OUT OF RANGE `, error);
     })
+    
   }
 
   getUserData(2);
   getUserData(6);
   getUserData(9);
+  getUserData(11);

@@ -32,10 +32,29 @@ export async function db1(id) {
   const json = await data.json();
 
   return {
+    userId: json.id,
+    name: json.name,
     username: json.username,
+    email: json.email,
+    address : {
+      street : json.address.street,
+      suite: json.address.suite,
+      city: json.address.city,
+      zipcode: json.address.zipcode,
+      geo: {
+        lat: json.address.geo.lat,
+        lng: json.address.geo.lng
+      }
+    },
+    phobe: json.phobe,
     website: json.website,
-    company: json.company
-  };
+    company: { 
+      name: json.company.name,
+      catchPhrase: json.company.catchPhrase,
+      bs: json.company.bs
+  }
+}
+
 }
 /**
  * Accepts a user id value and returns an object containing
@@ -51,10 +70,28 @@ export async function db2(id) {
   const json = await data.json();
 
   return {
+    userId: json.id,
+    name: json.name,
     username: json.username,
+    email: json.email,
+    address : {
+      street : json.address.street,
+      suite: json.address.suite,
+      city: json.address.city,
+      zipcode: json.address.zipcode,
+      geo: {
+        lat: json.address.geo.lat,
+        lng: json.address.geo.lng
+      }
+    },
+    phobe: json.phobe,
     website: json.website,
-    company: json.company
-  };
+    company: { 
+      name: json.company.name,
+      catchPhrase: json.company.catchPhrase,
+      bs: json.company.bs
+  }
+}
 }
 /**
  * Accepts a user id value and returns an object containing
@@ -70,10 +107,28 @@ export async function db3(id) {
   const json = await data.json();
 
   return {
+    userId: json.id,
+    name: json.name,
     username: json.username,
+    email: json.email,
+    address : {
+      street : json.address.street,
+      suite: json.address.suite,
+      city: json.address.city,
+      zipcode: json.address.zipcode,
+      geo: {
+        lat: json.address.geo.lat,
+        lng: json.address.geo.lng
+      }
+    },
+    phobe: json.phobe,
     website: json.website,
-    company: json.company
-  };
+    company: { 
+      name: json.company.name,
+      catchPhrase: json.company.catchPhrase,
+      bs: json.company.bs
+  }
+}
 }
 
 /**
